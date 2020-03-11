@@ -258,26 +258,20 @@ class Board extends React.Component<{}, BoardState> {
         ) : this.state.pieces === 0 ? (
           <>
             <h1>Game Over :(</h1>
-            <button
-              className="btn btn-outline-primary my-3"
-              onClick={this.onStartOver}
-            >
-              Start Over
-            </button>
           </>
         ) : (
           <>
             <h1>You win!</h1>
             <h2>{this.getWinText(this.state.pieces)}</h2>
             <h6 className="pb-3">{`Number of pieces left: ${this.state.pieces}`}</h6>
-            <button
-              className="btn btn-outline-primary my-3"
-              onClick={this.onStartOver}
-            >
-              Start Over
-            </button>
           </>
         )}
+        <button
+          className="btn btn-outline-primary my-3"
+          onClick={this.onStartOver}
+        >
+          Start Over
+        </button>
       </div>
     );
   }
